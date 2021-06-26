@@ -1,0 +1,88 @@
+terraform
+ it is a declairative
+
+provider = import library
+
+provider "aws"
+
+resource/data = function call of library
+
+resource "aws_vpc"
+data "aws_vpc" "existing_vpc"
+
+arguments= parameters of function
+
+cidr
+availability_zone
+
+
+terraform --version
+
+terraform init
+
+.terraform
+.terraform.lock.hcl
+
+ec2.tf
+
+provider.tf
+
+terraform plan
+
+terraform apply
+
+terraform.tfstate - file will create
+
+terraform show
+
+cat terraform.tfstate
+
+if you want to upgrade or downgrade the instance. you just change the instance type then you enter the plan and apply. 
+
+terraform destroy (use this command otherwise you # this resource line source code. it will automatically delete)
+
+more understand Terraform state
+
+Terraform must store state about your managed infrastructure and configuration.
+This state is used by Terraform to map real world resources to your configuration.
+
+Terraform Refresh
+
+Update the state with the real infrastructure.
+
+Desired state and current State
+
+Desired state = Current state
+
+if you want to update the current aws instance type to terrafrom state file use refresh. this is not update configuration file
+
+varriable - used for repeated standard value. 
+
+replace the hardcoded value( 10.12.12.10/32 )
+
+terraform validate (Compare the configuration file)
+
+Attributes
+
+Every Resources have Arguments and Attributes
+TF use this for output
+TF input this to other Resource being created
+
+Output
+After created Resource, fetch the value from resource Attributes
+
+in output file if you not metioned any attribute it show all attributes
+
+Attributes
+
+Terraform input Attributes to other Resource being created
+
+the terraform fmt command is used to rewrite Terraform configuration files to a canonical format and style.
+
+-write =false - Don't overwrite  the input files. (This is implied by -check or when 
+
+-diff - Display diffs of formatting changes
+
+fmt vs validate
+
+
